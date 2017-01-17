@@ -7,11 +7,11 @@ EXAMPLE:
 4. "Mr     John Smith", 13 ---> "Mr%20John%Smith"
 """
 
-def urlify(astr, int):
+def urlify(astr, num):
     clean_str = astr.strip(" ")
     if len(astr) == 0:
         return ""
-    elif len(astr) == 1:
+    elif num == 1:
         return astr
 
     new_str = ""
