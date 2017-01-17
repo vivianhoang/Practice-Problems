@@ -5,6 +5,7 @@ EXAMPLE:
 2. "a      ", 1 ---> "a"
 3. "", 0 ---> ""
 4. "Mr     John Smith", 13 ---> "Mr%20John%Smith"
+. "%20 hi"
 """
 
 def urlify(astr, num):
@@ -12,7 +13,8 @@ def urlify(astr, num):
     if len(astr) == 0:
         return ""
     elif num == 1:
-        return astr
+        print clean_str
+        return
 
     new_str = ""
     for char in clean_str:
@@ -29,3 +31,4 @@ def urlify(astr, num):
 urlify("     Mr     John Smith    ", 13)
 urlify("a    ", 1)
 urlify("", 0)
+urlify("%20 hi", 6)
